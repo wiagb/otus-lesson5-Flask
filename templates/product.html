@@ -1,0 +1,17 @@
+{% extends "base.html"%}
+
+{% block title %}
+    Описание товара
+{% endblock %}
+
+
+{% block content %}
+<div class="product"><h2>Характеристики товара</h2>
+    <div>
+        <img src="/static/{{ prod[3] }}.jpeg">
+        {{ prod[0] }}<br><br>
+        Цена: {{ prod[1] }} руб.<br><br>
+        Количество на складе: {{ prod[2] }} шт.<br>
+    </div>
+</div>
+{% endblock %}

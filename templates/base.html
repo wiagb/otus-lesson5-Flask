@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+        }
+
+        .category {
+             float: left;
+        }
+
+        .product {
+            margin-left: 300px;
+        }
+    </style>
+</head>
+
+
+<body>
+<h1>Магазин товаров для животных</h1><br>
+<div class="category">
+    <h2>Категории кормов:</h2>
+    <ul>
+        {% for item in category %}
+            <li><a href="/{{item}}"> {{ item }} </a></li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% block content %}
+{% endblock %}
+
+</body>
+</html>
